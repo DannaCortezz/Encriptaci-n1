@@ -16,29 +16,36 @@ public class Archivo {
     }
     
    
-       public void  Agregar(String str) {
+       public void  Agregar(String str) 
+       
+              try {
       
-        PrintWriter wr = null;
-     
-        try{
-          wr = new PrintWriter(archivo);
-        
-          wr.print(str);
-          
-        }catch(Exception e){
+      File f
+                = new File("c:\\users\\program.txt");
+  
             
-            System.err.println("Error");
+            String path = f.getPath();
+  
+            
+            System.out.println("File path : " + path);
+        }
+           
+              }
+            
+            }else{
+                System.out.println("Error");
+            
+            }
        
         }
        }
         public void Resultado(){
-        
-        FileReader archivo;
+         FileReader archivo;
         BufferedReader lector;
         
         
         try{
-            archivo = new  FileReader("C:\\Users\\Danna\\OneDrive\\Documentos\\NetBeansProjects\\TAP\\src\\Tarea1\\Archivo.txt");
+            archivo = new  FileReader();
             if(archivo.ready()){
                 lector = new BufferedReader(archivo);
                 String cadena;
@@ -58,6 +65,7 @@ public class Archivo {
             
        
         }
+       
        
         
         
